@@ -1,0 +1,15 @@
+extends ./layout/default
+
+block title 
+    title 黎西工坊后台管理
+
+block content
+    .container
+        h1 Hi, #{name}
+        p You have #{money}$.
+        .dropdown
+            button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 行为
+            div(class="dropdown-menu" aria-labelledby="dropdownMenuButton")
+                a(class="dropdown-item" href="#") 添加
+                a(class="dropdown-item" href="#") 删除
+                

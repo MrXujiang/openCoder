@@ -1,0 +1,5 @@
+.ha {
+    color: #06c;
+    transform: translateX(30px);
+    transition: 1s all;
+}

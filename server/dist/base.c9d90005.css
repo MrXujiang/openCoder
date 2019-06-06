@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/*css reset*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* For some Androids */
+    -webkit-appearance: none;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+th,
+td,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "微软雅黑", 'Helvetica Neue', Helvetica, sans-serif;
+    color: #5e5d5d;
+    background-color: #f4f4f4;
+    outline: none;
+    -webkit-appearance: none;
+    /* max-width:750px; */
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea,
+option,
+button {
+    font-size: 100%;
+    font-weight: normal;
+    /* -webkit-appearance: none; */
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+}
+
+a:active,
+a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+
+/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+
+a,
+button,
+textarea,
+select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    font-family: "微软雅黑", 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
+/*禁止改变大小*/
+
+textarea {
+    resize: none;
+}
+
+
+/*解决firefox按钮文字难以垂直居中问题*/
+
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"]>input[type="button"]::-moz-focus-inner {
+    border: none;
+    padding: 0;
+    /* -webkit-appearance: none; */
+}
+
+input,
+textarea,
+select,
+option,
+button,
+form,
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 1px;
+}
+
+:-moz-placeholder {
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 1px;
+}
+
+::-moz-placeholder {
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 1px;
+}
+
+:-ms-input-placeholder {
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 1px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: #5e5d5d;
+}
+
+
+/* 通用样式 */
+
+
+
+/* 清除浮动 */
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* reset elementUI */
+.el-button--mini {
+    padding: 5px 9px !important;
+}
