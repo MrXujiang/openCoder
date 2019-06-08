@@ -1,7 +1,10 @@
 ### openCoder项目整体架构
-openCoder
-  -- manage 管理后台UI
-  -- webapp 移动端app
+openCoder  
+
+  -- manage 管理后台UI  
+
+  -- webapp 移动端app  
+
      -- src
         -- api 页面封装的请求
         -- assets 静态资源存放区
@@ -20,9 +23,12 @@ openCoder
         main.js 入口
         router.js 路由
         vue.config.js vue-cli自定义配置
-        .eslintrc 语法检测配置文件
-  -- pc pc端UI
-  -- server 服务端
+        .eslintrc 语法检测配置文件  
+
+  -- pc pc端UI  
+
+  -- server 服务端  
+  
      -- cert https等相关认证信息
      -- config 公共配置区
      -- crawel node爬虫区
