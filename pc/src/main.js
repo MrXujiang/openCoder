@@ -5,11 +5,15 @@ import store from './store'
 import './registerServiceWorker'
 
 import { Button,
-         Select
+         Select,
+         Table,
+         TableColumn
 } from 'element-ui';
 
 Vue.component(Button.name, Button);
 Vue.component(Select.name, Select);
+Vue.component(Table.name, Table);
+Vue.component(TableColumn.name, TableColumn);
 
 Vue.config.productionTip = false
 
