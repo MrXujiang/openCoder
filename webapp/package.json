@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "clipboard": "^2.0.4",
     "core-js": "^2.6.5",
     "mint-ui": "^2.2.13",
     "register-service-worker": "^1.6.2",
