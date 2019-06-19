@@ -18,9 +18,10 @@ export default {
     Hi
   },
 
-  data() {
+  data () {
     return {
-      title: 'Welcome to OpenCoder For Manage'
+      title: 'Welcome to OpenCoder For Manage',
+      test:'这是小超测试'
     }
   },
 
