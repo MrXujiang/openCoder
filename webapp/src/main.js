@@ -5,8 +5,8 @@ import store from './store/'
 import './registerServiceWorker'
 import { Button, Cell } from 'mint-ui'
 
-Vue.component(Button.name, Button)
-Vue.component(Cell.name, Cell)
+Vue.use(Button)
+    .use(Cell)
 
 Vue.config.productionTip = false
 
