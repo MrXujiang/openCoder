@@ -7,13 +7,17 @@ import './registerServiceWorker'
 import { Button,
          Select,
          Table,
-         TableColumn
+         TableColumn,
+         Upload,
+         Icon
 } from 'element-ui';
 
 Vue.component(Button.name, Button);
 Vue.component(Select.name, Select);
 Vue.component(Table.name, Table);
 Vue.component(TableColumn.name, TableColumn);
+Vue.component(Upload.name, Upload);
+Vue.component(Icon.name, Icon);
 
 Vue.config.productionTip = false
 

@@ -2,6 +2,12 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/img/logo.png">
     <Hi :msg="title"/>
+    <!-- 测试上传图片 -->
+    
+    <upload action="123" ref="upload" :imgUrl="img"></upload>
+    <upload action="123" ref="upload" imgUrl="https://img3.mukewang.com/59964eb600012d9a06400640-100-100.jpg"></upload>
+    <el-button @click="upload">上传</el-button>
+
     <el-button @click="add({num: 1})" type="primary">vuex-total: <em>{{total}}</em></el-button>
     <el-table
     :data="tableData"
@@ -52,24 +58,28 @@
       </template>
     </el-table-column>
   </el-table>
+  
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Hi from '@/components/Hi.vue'
+import Upload from '@/components/upload'
 import { mapState, mapMutations, mapActions } from 'vuex'
 
 export default {
   name: 'home',
 
   components: {
-    Hi
+    Hi,
+    Upload
   },
 
   data() {
     return {
       title: 'Welcome to OpenCoder For PC',
+      img: 'https://img3.mukewang.com/59964eb600012d9a06400640-100-100.jpg',
       tableData: [{
           date: '2016-05-03',
           name: '王小虎',
@@ -133,7 +143,11 @@ export default {
     ]),
     deleteRow(index, rows) {
         rows.splice(index, 1);
-      }
+      },
+    upload() {
+      this.img = '';
+      this.$refs.upload.submitUpload()
+    }
   }
 }
 </script>
