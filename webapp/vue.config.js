@@ -22,7 +22,10 @@ module.exports = {
         sourceMap: false,
         // css预设器配置项
         loaderOptions: {
-            
+            sass: {
+              // 向全局sass样式传入共享的全局变量
+              data: `@import "~@/style/variables.scss";`
+            }
         },
         // 启用 CSS modules for all css / pre-processor files.
         modules: false
@@ -53,6 +56,6 @@ module.exports = {
     },
     // webpack配置
     chainWebpack: config => {
-        config.resolve.alias.set('utils',resolve('src/utils'))
+        config.resolve.alias.set('utils',resolve('../utils'))
     },
 }
