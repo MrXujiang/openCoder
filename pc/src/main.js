@@ -21,6 +21,9 @@ Vue.component(Icon.name, Icon);
 
 Vue.config.productionTip = false
 
+// 测试自定义环境变量
+console.log(process.env);
+
 new Vue({
   router,
   store,

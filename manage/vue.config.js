@@ -55,6 +55,6 @@ module.exports = {
     },
     // webpack配置
     chainWebpack: config => {
-        config.resolve.alias.set('utils',resolve('src/utils'))
+        config.resolve.alias.set('utils',resolve('../utils'))
     },
 }

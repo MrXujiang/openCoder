@@ -5,7 +5,7 @@
     <!-- 测试上传图片 -->
     
     <upload action="123" ref="upload" :imgUrl="img"></upload>
-    <upload action="123" ref="upload" imgUrl="https://img3.mukewang.com/59964eb600012d9a06400640-100-100.jpg"></upload>
+    <div class="box">全局按钮</div>
     <el-button @click="upload">上传</el-button>
 
     <el-button @click="add({num: 1})" type="primary">vuex-total: <em>{{total}}</em></el-button>
@@ -67,6 +67,7 @@
 import Hi from '@/components/Hi.vue'
 import Upload from '@/components/upload'
 import { mapState, mapMutations, mapActions } from 'vuex'
+import { isIe } from 'utils/common'
 
 export default {
   name: 'home',
@@ -137,6 +138,10 @@ export default {
     ...mapState(['total'])
   },
 
+  created() {
+    console.log(isIe);
+  },
+
   methods: {
     ...mapMutations([
       'add'
@@ -151,3 +156,13 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+  .box
+    border-radius(6px)
+    font-size: fs14
+    width: 100px
+    color: #fff
+    background-color: #000
+</style>
+
