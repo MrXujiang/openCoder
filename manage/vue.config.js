@@ -23,7 +23,11 @@ module.exports = {
         // css预设器配置项
         loaderOptions: {
             less: {
-                javascriptEnabled: true   // 解决.bezierEasingMixin();报错问题
+                javascriptEnabled: true,   // 解决.bezierEasingMixin();报错问题
+                // 全局样式
+                modifyvars: {
+                    'primary-color': '#0E2E5A',
+                }
             }
         },
         // 启用 CSS modules for all css / pre-processor files.
@@ -55,6 +59,6 @@ module.exports = {
     },
     // webpack配置
     chainWebpack: config => {
-        config.resolve.alias.set('utils',resolve('../utils'))
+        config.resolve.alias.set('utils',resolve('src/utils'))
     },
 }
