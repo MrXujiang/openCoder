@@ -4,30 +4,39 @@
       <div class="logo">OpenCoder管理系统</div>
       <a-menu class="menu" theme="dark" mode="inline" :defaultSelectedKeys="['1']">
         <a-menu-item key="1">
+          <a-icon type="user" />
           <span>首页</span>
         </a-menu-item>
         <a-menu-item key="2">
+          <a-icon type="user" />
           <span>用户管理</span>
         </a-menu-item>
         <a-menu-item key="3">
+          <a-icon type="user" />
           <span>博客管理</span>
         </a-menu-item>
         <a-menu-item key="4">
+          <a-icon type="user" />
           <span>活动管理</span>
         </a-menu-item>
         <a-menu-item key="5">
+          <a-icon type="user" />
           <span>可视化模版</span>
         </a-menu-item>
         <a-menu-item key="6">
+          <a-icon type="user" />
           <span>博客管理</span>
         </a-menu-item>
         <a-menu-item key="7">
+          <a-icon type="user" />
           <span>图片库</span>
         </a-menu-item>
         <a-menu-item key="8">
+          <a-icon type="user" />
           <span>资料管理</span>
         </a-menu-item>
         <a-menu-item key="9">
+          <a-icon type="user" />
           <span>友情链接</span>
         </a-menu-item>
       </a-menu>
