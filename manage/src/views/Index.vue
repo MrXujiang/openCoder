@@ -71,6 +71,10 @@ export default {
 </script>
 
 <style lang="less">
+#index-box {
+  width: 100%;
+  height: 100%;
+}
 #index-box .header {
   background-color: #0e2e5a;
   display: flex;
