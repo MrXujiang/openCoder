@@ -7,43 +7,26 @@
       </div>
       <div class="login-operating-area">
         <a-form :form="form">
-          <a-form-item
-            :label-col="formItemLayout.labelCol"
-            :wrapper-col="formItemLayout.wrapperCol"
-            label="Name"
-          >
+          <a-form-item :wrapper-col="formItemLayout.wrapperCol">
             <a-input
               v-decorator="[
-          'username',
-          {rules: [{ required: true, message: 'Please input your name' }]}
-        ]"
-              placeholder="Please input your name"
+                'username',
+                {rules: [{ required: true, message: '请输入用户名' }]}
+              ]"
+              placeholder="请输入用户名"
             />
           </a-form-item>
-          <a-form-item
-            :label-col="formItemLayout.labelCol"
-            :wrapper-col="formItemLayout.wrapperCol"
-            label="Nickname"
-          >
+          <a-form-item :wrapper-col="formItemLayout.wrapperCol">
             <a-input
               v-decorator="[
-          'nickname',
-          {rules: [{ required: checkNick, message: 'Please input your nickname' }]}
-        ]"
-              placeholder="Please input your nickname"
+                'nickname',
+                {rules: [{ required: true, message: '请输入密码' }]}
+              ]"
+              placeholder="请输入密码"
             />
           </a-form-item>
-          <a-form-item
-            :label-col="formTailLayout.labelCol"
-            :wrapper-col="formTailLayout.wrapperCol"
-          >
-            <a-checkbox :checked="checkNick" @change="handleChange">Nickname is required</a-checkbox>
-          </a-form-item>
-          <a-form-item
-            :label-col="formTailLayout.labelCol"
-            :wrapper-col="formTailLayout.wrapperCol"
-          >
-            <a-button type="primary" @click="check">Check</a-button>
+          <a-form-item :wrapper-col="formTailLayout.wrapperCol">
+            <a-button class="login-form-button" type="primary" @click="check">登陆</a-button>
           </a-form-item>
         </a-form>
       </div>
@@ -53,18 +36,15 @@
 
 <script>
 const formItemLayout = {
-  labelCol: { span: 4 },
-  wrapperCol: { span: 8 }
+  wrapperCol: { span: 12, offset: 6 }
 };
 const formTailLayout = {
-  labelCol: { span: 4 },
-  wrapperCol: { span: 8, offset: 4 }
+  wrapperCol: { span: 12, offset: 6 }
 };
 export default {
   name: "login",
   data() {
     return {
-      checkNick: false,
       formItemLayout,
       formTailLayout,
       form: this.$form.createForm(this)
@@ -88,7 +68,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 #login {
   width: 100%;
   height: 100%;
@@ -98,21 +78,36 @@ export default {
   align-items: center;
 }
 
+input {
+  border-radius: 0px;
+}
+
 .login-box {
-    width: 430px;
-    height: 500px;
+  width: 430px;
+  height: 500px;
 }
 
 .login-title {
-    text-align: center;
-    height: 120px;
-    background-color: #0E2E5A;
-    padding-top: 10px;
+  text-align: center;
+  height: 120px;
+  background-color: #0e2e5a;
+  padding-top: 10px;
 }
 
 .login-title h2 {
-    font-size: 36px;
-    color: #fff;
-    line-height: 38px;
+  font-size: 36px;
+  color: #fff;
+  line-height: 38px;
+}
+
+.login-operating-area {
+  background-color: #fff;
+  padding: 50px 0 50px 0;
+}
+
+.login-box .login-form-button {
+  width: 100%;
+  border-radius: 0px;
+  background-color: #0e2e5a;
 }
 </style>
