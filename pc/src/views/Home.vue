@@ -140,6 +140,7 @@ export default {
 
   created() {
     console.log(isIe);
+    this.upload();
   },
 
   methods: {

@@ -1,0 +1,16 @@
+{
+    "restartable": "rs",
+    "ignore": [
+        ".git",
+        "dist",
+        ".cache",
+        "routerMap.json",
+        "readme.md",
+        "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "watch": [
+        "./"
+    ],
+    "ext": "js json"
+}

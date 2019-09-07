@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.19.0",
+    "koa-logger": "^3.2.1"
   },
   "devDependencies": {
     "babel-plugin-component": "^1.1.1"
