@@ -1,3 +1,11 @@
+<!--
+ * @Author: argus
+ * @Date: 2020-05-11 10:23:49
+ * @LastEditTime: 2020-05-11 11:50:00
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \webapp\src\components\content\NavBar.vue
+ -->
 <template>
   <nav class="navBar"  @click="auto">
     <router-link
@@ -31,15 +39,14 @@ export default {
   },
 
   methods: {
-    auto (e) {
-      /**
-       * TODO
-       * nav自动滚动
-       */
-
+    auto (e) {  
+      e.target.scrollIntoView({behavior: "smooth", block: "end", inline: "center"})
+       //nav自动滚动到可视区域
     }
+  },
+  mounted(){
+    
   }
-
 }
 </script>
 
