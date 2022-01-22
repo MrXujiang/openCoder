@@ -46,7 +46,7 @@
     "babel-preset-es2015": "^6.24.1",
     "koa-logger": "^3.2.0",
     "logger": "0.0.1",
-    "nanoid": "^1.2.1",
+    "nanoid": "^3.1.31",
     "nodemon": "^1.18.3",
     "qiniu": "^7.2.1",
     "rimraf": "^2.6.2"
